@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: myservice
+  namespace: default
+spec:
+  template:
+    spec:
+      volumes:
+      - name: code
+        hostPath:
+          path: /users/bob/code
